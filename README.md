@@ -10,7 +10,7 @@ An on-chain commitment escrow on Solana, written in Anchor 1.2.0.
 
 | Instruction                                                    | Signer  | Rules                                                                                                        |
 | -------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------ |
-| `create_pact(id, stake, deadline, referee, beneficiary, goal)` | creator | stake ≥ 0.01 SOL · goal 1–64 bytes · `now < deadline ≤ now + 1y` · referee ≠ creator · beneficiary ≠ creator |
+| `create_pact(id, stake, deadline, referee, beneficiary, goal)` | creator | stake ≥ 0.01 SOL,  goal 1–64 bytes,  `now < deadline ≤ now + 1y`, referee ≠ creator, beneficiary ≠ creator |
 | `confirm_pact`                                                 | referee | `now < deadline`; closes to creator                                                                          |
 | `forfeit_pact`                                                 | anyone  | `now ≥ deadline`; stake → beneficiary, rent → creator                                                        |
 
