@@ -1,0 +1,6 @@
+# Personal notes (gitignored — copy to CLAUDE.local.md)
+
+- My devnet RPC: `https://api.devnet.solana.com` (swap for a private endpoint if rate-limited)
+- Deployer wallet alias: `{{wallet-name}}` — public key only, never the path contents
+- Preferred package manager: pnpm
+- When I say "ship it": run /test, then /audit --diff, then stop and show me the summary — I deploy manually.

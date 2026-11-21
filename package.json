@@ -1,0 +1,21 @@
+{
+  "name": "pact",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "NO_DNA=1 anchor build --arch v0 && yarn codama:generate",
+    "codama:generate": "node codama.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@codama/nodes-from-anchor": "^1.5.6",
+    "@codama/renderers-js": "^2.9.1",
+    "@types/node": "^26.6.6",
+    "codama": "^1.11.0",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@solana/kit": "^8.6.0",
+    "@solana/program-client-core": "^8.5.0"
+  }
+}

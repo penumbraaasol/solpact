@@ -1,0 +1,260 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "NO_DNA": "1",
+    "RUST_BACKTRACE": "1",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
+  },
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Edit",
+      "Write",
+      "WebSearch",
+      "WebFetch(domain:solana.com)",
+      "WebFetch(domain:www.anchor-lang.com)",
+      "WebFetch(domain:anchor-lang.com)",
+      "WebFetch(domain:www.solanakit.com)",
+      "WebFetch(domain:docs.rs)",
+      "WebFetch(domain:crates.io)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:solana.stackexchange.com)",
+      "WebFetch(domain:docs.surfpool.run)",
+      "mcp__solana-mcp",
+      "mcp__context7",
+      "Bash(anchor build*)",
+      "Bash(anchor test*)",
+      "Bash(anchor idl build*)",
+      "Bash(anchor idl parse*)",
+      "Bash(anchor idl type*)",
+      "Bash(anchor keys list*)",
+      "Bash(anchor keys sync*)",
+      "Bash(anchor clean*)",
+      "Bash(anchor fuzz*)",
+      "Bash(anchor localnet*)",
+      "Bash(anchor --version*)",
+      "Bash(anchor expand*)",
+      "Bash(cargo build*)",
+      "Bash(cargo build-sbf*)",
+      "Bash(cargo test*)",
+      "Bash(cargo check*)",
+      "Bash(cargo clippy*)",
+      "Bash(cargo fmt*)",
+      "Bash(cargo doc*)",
+      "Bash(cargo tree*)",
+      "Bash(cargo metadata*)",
+      "Bash(cargo add*)",
+      "Bash(cargo update*)",
+      "Bash(cargo expand*)",
+      "Bash(rustc --version*)",
+      "Bash(rustfmt*)",
+      "Bash(solana --version*)",
+      "Bash(solana config get*)",
+      "Bash(solana address*)",
+      "Bash(solana balance*)",
+      "Bash(solana airdrop*)",
+      "Bash(solana account*)",
+      "Bash(solana program show*)",
+      "Bash(solana program dump*)",
+      "Bash(solana logs*)",
+      "Bash(solana confirm*)",
+      "Bash(solana block*)",
+      "Bash(solana slot*)",
+      "Bash(solana epoch-info*)",
+      "Bash(solana rent*)",
+      "Bash(solana-keygen pubkey*)",
+      "Bash(solana-keygen verify*)",
+      "Bash(solana-keygen grind*)",
+      "Bash(spl-token display*)",
+      "Bash(spl-token accounts*)",
+      "Bash(spl-token balance*)",
+      "Bash(spl-token supply*)",
+      "Bash(surfpool start*)",
+      "Bash(surfpool --version*)",
+      "Bash(surfpool --help*)",
+      "Bash(pnpm install*)",
+      "Bash(pnpm add*)",
+      "Bash(pnpm test*)",
+      "Bash(pnpm run *)",
+      "Bash(pnpm exec *)",
+      "Bash(pnpm lint*)",
+      "Bash(pnpm build*)",
+      "Bash(pnpm tsc*)",
+      "Bash(npm run *)",
+      "Bash(npm test*)",
+      "Bash(npx tsc*)",
+      "Bash(npx codama*)",
+      "Bash(npx prettier*)",
+      "Bash(npx eslint*)",
+      "Bash(npx vitest*)",
+      "Bash(bun test*)",
+      "Bash(bun run *)",
+      "Bash(bunx codama*)",
+      "Bash(node --version*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git show*)",
+      "Bash(git branch*)",
+      "Bash(git add *)",
+      "Bash(git stash*)",
+      "Bash(git checkout -b *)",
+      "Bash(git switch*)",
+      "Bash(jq *)",
+      "Bash(ls*)",
+      "Bash(wc*)",
+      "Bash(which*)",
+      "Bash(mkdir*)",
+      "Bash(touch*)"
+    ],
+    "ask": [
+      "Bash(anchor deploy*)",
+      "Bash(anchor upgrade*)",
+      "Bash(anchor idl init*)",
+      "Bash(anchor idl upgrade*)",
+      "Bash(anchor idl set-authority*)",
+      "Bash(anchor idl close*)",
+      "Bash(anchor idl erase-authority*)",
+      "Bash(anchor migrate*)",
+      "Bash(anchor verify*)",
+      "Bash(solana program deploy*)",
+      "Bash(solana program write-buffer*)",
+      "Bash(solana program set-upgrade-authority*)",
+      "Bash(solana program set-buffer-authority*)",
+      "Bash(solana program extend*)",
+      "Bash(solana config set*)",
+      "Bash(solana transfer*)",
+      "Bash(solana-keygen new*)",
+      "Bash(solana-keygen recover*)",
+      "Bash(spl-token create*)",
+      "Bash(spl-token mint*)",
+      "Bash(spl-token transfer*)",
+      "Bash(spl-token burn*)",
+      "Bash(spl-token authorize*)",
+      "Bash(spl-token close*)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(git rebase*)",
+      "Bash(git reset*)",
+      "Bash(rm *)",
+      "Bash(mv *)",
+      "Bash(avm *)",
+      "Bash(agave-install*)",
+      "Bash(cargo install*)",
+      "Bash(pnpm remove*)",
+      "Bash(npm install*)",
+      "Bash(npm uninstall*)"
+    ],
+    "deny": [
+      "Read(./target/deploy/*-keypair.json)",
+      "Read(./target/deploy/**/*.json)",
+      "Read(~/.config/solana/**)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/.env)",
+      "Read(./**/.env.*)",
+      "Read(./**/*.pem)",
+      "Read(./**/*-keypair.json)",
+      "Read(./**/id.json)",
+      "Edit(./target/deploy/*-keypair.json)",
+      "Edit(~/.config/solana/**)",
+      "Edit(./**/*-keypair.json)",
+      "Edit(./clients/js/src/generated/**)",
+      "Write(./clients/js/src/generated/**)",
+      "Bash(solana program close*)",
+      "Bash(solana-keygen new * --force*)",
+      "Bash(solana-keygen new --force*)",
+      "Bash(solana program set-upgrade-authority * --final*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(curl * | sh*)",
+      "Bash(curl * | bash*)",
+      "Bash(wget * | sh*)",
+      "Bash(wget * | bash*)",
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~*)",
+      "Bash(rm -rf target/deploy*)",
+      "Bash(sudo *)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-context.sh",
+            "timeout": 20
+          }
+        ]
+      },
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Reminders after compaction: NO_DNA=1 on anchor/surfpool commands; never touch keypair files or target mainnet; run anchor build + clippy + anchor test before declaring a program change done; regenerate the Codama client after IDL changes; deploys only via /deploy.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/protect-secrets.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/guard-bash.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/format-on-edit.sh",
+            "timeout": 60
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Bash(anchor build*)",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post-build-check.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/stop-check.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
