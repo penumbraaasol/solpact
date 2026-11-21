@@ -1,4 +1,4 @@
-# Pact — put your SOL where your mouth is
+# Pact: put your SOL where your mouth is
 
 An on-chain commitment escrow on Solana, written in Anchor 1.2.0.
 
